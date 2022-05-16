@@ -25,6 +25,8 @@ class Array:
     def __setitem__(self, key, value):
         if isinstance(value, type(self.__array[key])):
             self.__array[key] = value
+        else:
+            raise TypeError('Only objects of same type are permitted')
 
     def __getitem__(self, key):
         return self.__array[key]
