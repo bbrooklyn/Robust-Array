@@ -1,6 +1,6 @@
 # Custom array class
 class Array:
-    def __init__(self,length,array = []):        
+    def __init__(self, length, array = []):        
         if all(isinstance(x, type(array[0])) for x in array):
             if len(array) <= length:
                 self.__array = array
@@ -10,7 +10,7 @@ class Array:
         else:
             raise TypeError('Only objects of same type are permitted')
         
-    def append(self,value):
+    def append(self, value):
         if len(self.__array) + 1 <= self.__length:
             if len(self.__array) == 0:
                 self.__array.append(value)
